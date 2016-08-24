@@ -34,15 +34,33 @@ class Zendvn_Mp_Mb_Data2 {
         
         
         $postVal    =   $_POST;
-        update_post_meta($post_id, $this->create_key('title'), sanitize_text_field($postVal[$this->create_id('title')]));
-        update_post_meta($post_id, $this->create_key('price'), sanitize_text_field($postVal[$this->create_id('price')]));
-        update_post_meta($post_id, $this->create_key('author'), sanitize_text_field($postVal[$this->create_id('author')]));
-        update_post_meta($post_id, $this->create_key('level'), sanitize_text_field($postVal[$this->create_id('level')]));
-        update_post_meta($post_id, $this->create_key('profile'), strip_tags($postVal[$this->create_id('profile')]));
+        if(!isset($postVal[$this->_metabox_id . '-nonce'])) return $post_id;
+        
+        if(!wp_verify_nonce($postVal[$this->_metabox_id . '-nonce'], $this->_metabox_id)) return $post_id;
+        
+        // Prevent Autosave metabox
+        if(defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
+        
+        if(!current_user_can('edit_post', $post_id)) return $post_id;
+        
+        $arrData    =   array(
+            'title'         =>      sanitize_text_field($postVal[$this->create_id('title')]),
+            'price'         =>      sanitize_text_field($postVal[$this->create_id('price')]),
+            'author'        =>      sanitize_text_field($postVal[$this->create_id('author')]),
+            'level'         =>      sanitize_text_field($postVal[$this->create_id('level')]),
+            'profile'       =>      sanitize_text_field($postVal[$this->create_id('profile')]),
+        );
+        
+        foreach($arrData as $key => $value) {
+            update_post_meta($post_id, $this->create_key($key), $value);
+        }
+
     }
     
     public function show($post) {
         $htmlObj    =   new ZendvnHtml();
+        
+        wp_nonce_field($this->_metabox_id, $this->_metabox_id . '-nonce');
         
         // Tao phan tu title
         echo '<div class="zendvn-mb-wrap">';
@@ -50,27 +68,25 @@ class Zendvn_Mp_Mb_Data2 {
         $inputName      =   $this->create_id('title');
         $inputValue     =   get_post_meta($post->ID, $this->create_key('title'), true);
         $arr            =   array('size' => '25', 'id' => $inputID);
-        echo '<p><label for="'.$inputID.'">'. translate('Title') .'</label>
-                 '. $htmlObj->textbox($inputName, $inputValue, $arr) .'
-              </p>';
+        $html           =   $htmlObj->label(translate('Title')) . $htmlObj->textbox($inputName, $inputValue, $arr);
+        echo $htmlObj->pTag($html);
         
         // Tao phan tu price
         $inputID        =   $this->create_id('price');
         $inputName      =   $this->create_id('price');
         $inputValue     =   get_post_meta($post->ID, $this->create_key('price'), true);
         $arr            =   array('size' => '25', 'id' => $inputID);
-        echo '<p><label for="'.$inputID.'">'. translate('Price') .'</label>
-                 '. $htmlObj->textbox($inputName, $inputValue, $arr) .'
-              </p>';
+        $html           =   $htmlObj->label(translate('Price')). $htmlObj->textbox($inputName, $inputValue, $arr);
+        echo $htmlObj->pTag($html);
+        
         
         // Tao phan tu author
         $inputID        =   $this->create_id('author');
         $inputName      =   $this->create_id('author');
         $inputValue     =   get_post_meta($post->ID, $this->create_key('author'), true);
         $arr            =   array('size' => '25', 'id' => $inputID);
-        echo '<p><label for="'.$inputID.'">'. translate('Author') .'</label>
-                 '. $htmlObj->textbox($inputName, $inputValue, $arr) .'
-              </p>';
+        $html           =   $htmlObj->label(translate('Author')) . $htmlObj->textbox($inputName, $inputValue, $arr);
+        echo $htmlObj->pTag($html);
         
         // Tao phan tu level
         $inputID        =   $this->create_id('level');
@@ -84,18 +100,19 @@ class Zendvn_Mp_Mb_Data2 {
             'advanced'          =>      translate('Advanced')
         );
         
-        echo '<p><label for="'.$inputID.'">'. translate('Level') .'</label>
-                 '. $htmlObj->selectbox($inputName, $inputValue, $arr, $options) .'
-              </p>';
+        $html           =   $htmlObj->label(translate('Level')) . $htmlObj->selectbox($inputName, $inputValue, $arr, $options) ;
+        
+        echo $htmlObj->pTag($html);
         
         // Tao phan tu profile
         $inputID        =   $this->create_id('profile');
         $inputName      =   $this->create_id('profile');
         $inputValue     =   get_post_meta($post->ID, $this->create_key('profile'), true);
         $arr            =   array('id' => $inputID, 'rows' => 6, 'cols' => 60);
-        echo '<p><label for="'.$inputID.'">'. translate('Profile') .'</label>
-                 '. $htmlObj->textarea($inputName, $inputValue, $arr) .'
-              </p>';
+        
+        $html           =   $htmlObj->label(translate('Profile')) . $htmlObj->textarea($inputName, $inputValue, $arr);
+        
+        echo $htmlObj->pTag($html);
         
         echo '</div>';
         

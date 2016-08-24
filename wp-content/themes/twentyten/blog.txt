@@ -1,0 +1,59 @@
+AUTHOR: test00001467
+TITLE: 日記1日目
+STATUS: Publish
+ALLOW COMMENTS: 0
+CONVERT BREAKS: default
+ALLOW PINGS: 0
+PRIMARY CATEGORY: 普通の日記
+CATEGORY: 普通の日記
+
+DATE: 08/08/2016 17:02:21
+-----
+BODY:
+文字の投稿と画像の表示をテストします。
+
+・「FC2ブログ」のトップページ
+<a href="http://test00001467.blog.fc2.com/img/FC2_001.jpg/" target="_blank"><img src="http://blog-imgs-94.fc2.com/t/e/s/test00001467/FC2_001s.jpg" alt="FC2ブログトップページ" border="0" width="300" height="238" /></a>
+
+・「FC2ブログ」へのリンクはこちら
+<a href="http://blog.fc2.com/" target="_blank" title="http://blog.fc2.com/">http://blog.fc2.com/</a>
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------
+AUTHOR: test00001467
+TITLE: Testing Blog 02
+STATUS: Publish
+ALLOW COMMENTS: 1
+CONVERT BREAKS: default
+ALLOW PINGS: 0
+PRIMARY CATEGORY: 未分類
+CATEGORY: 未分類
+
+DATE: 08/08/2016 19:49:24
+-----
+BODY:
+aaaaaaaaaaaaaa<a href="http://test00001467.blog.fc2.com/img/logo_ueno_sp.png/" target="_blank"><img src="http://blog-imgs-94.fc2.com/t/e/s/test00001467/logo_ueno_sp.png" alt="logo_ueno_sp.png" border="0" width="244" height="119" /></a>
+<a href="http://test00001467.blog.fc2.com/img/FC2_001.jpg/" target="_blank"><img src="http://blog-imgs-94.fc2.com/t/e/s/test00001467/FC2_001s.jpg" alt="FC2ブログトップページ" border="0" width="300" height="238" /></a>
+-----
+EXTENDED BODY:
+aaaaa
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+
+--------

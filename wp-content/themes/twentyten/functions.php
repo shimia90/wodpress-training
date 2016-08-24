@@ -593,3 +593,6 @@ function twentyten_get_gallery_images() {
 
 	return $images;
 }
+
+
+//define('MY_WP_PATH', 'path/to/directory');

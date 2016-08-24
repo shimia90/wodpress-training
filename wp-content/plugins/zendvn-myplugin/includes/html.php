@@ -6,6 +6,23 @@ class ZendvnHtml{
 		
 	}
 	
+	public function btn_media_script($button_id, $input_id) {
+	    $script = "<script>
+            	    jQuery(document).ready(function($){
+            	    $('#{$button_id}').zendvnBtnMedia('{$input_id}');
+            	    });
+              </script>";
+	    return $script;
+	}
+	
+	public function pTag($val) {
+	    return '<p>'. $val .'</p>';
+	}
+	
+	public function label($val = '', $attr = array(), $options = null) {
+	    return '<label for="'.$attr['for'].'" >'.$val.':</label>';
+	}
+	
 	//Phần tử TEXTBOX
 	public function textbox($name = '', $value = '', $attr = array(), $options = null){
 		require_once ZENDVN_MP_INCLUDES_DIR . '/html/HtmlTextbox.php';		
