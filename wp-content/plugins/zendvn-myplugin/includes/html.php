@@ -15,12 +15,20 @@ class ZendvnHtml{
 	    return $script;
 	}
 	
-	public function pTag($val) {
-	    return '<p>'. $val .'</p>';
+	public function pTag($value, $attr   =   array(), $options = null) {
+	    $strAttr = '';
+	    if(count($attr)> 0){
+	        foreach ($attr as $key => $val){
+	            if($key != "type" && $key != 'value'){
+	                $strAttr .= ' ' . $key . '="' . $val . '" ';
+	            }
+	        }
+	    }
+	    return '<p ' . $strAttr .' >'. $value .'</p>';
 	}
 	
-	public function label($val = '', $attr = array(), $options = null) {
-	    return '<label for="'.$attr['for'].'" >'.$val.':</label>';
+	public function label($value = '', $attr = array(), $options = null) {
+	    return '<label for="'.$attr['for'].'" >'.$value.':</label>';
 	}
 	
 	//Phần tử TEXTBOX

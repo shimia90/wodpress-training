@@ -9,6 +9,8 @@ class ZendvnMpAdmin {
         
         add_action('admin_init', array($this, 'register_setting_and_fields'));
         
+        $this->ajaxPage();
+        
     }
     
     public function settingMenu() {
@@ -63,6 +65,15 @@ class ZendvnMpAdmin {
     
     public function new_title_input2() {
         echo '<input type="text" name="zendvn_mp_name[zendvn_mp_new_title2]" value="" />';
+    }
+    
+    
+    
+   
+    
+    public function ajaxPage() {
+        require_once ZENDVN_MP_SETTING_DIR . '/ajax.php';
+        new Zendvn_Mp_Setting_Ajax();
     }
     
 }

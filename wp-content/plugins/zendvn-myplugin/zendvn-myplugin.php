@@ -20,6 +20,7 @@ define('ZENDVN_MP_INCLUDES_DIR', ZENDVN_MP_PLUGIN_DIR . 'includes');
 define('ZENDVN_MP_WIDGET_DIR', ZENDVN_MP_PLUGIN_DIR . 'widgets');
 define('ZENDVN_MP_SHORTCODES_DIR', ZENDVN_MP_PLUGIN_DIR . 'shortcodes');
 define('ZENDVN_MP_METABOX_DIR', ZENDVN_MP_PLUGIN_DIR . 'metabox');
+define('ZENDVN_MP_SETTING_DIR', ZENDVN_MP_PLUGIN_DIR . 'settings');
 
 if(!is_admin()) {
     //require_once ZENDVN_MP_PLUGIN_DIR . 'public.php';
