@@ -5,11 +5,12 @@ class ZendvnMpAdmin {
     private $_menuSlug = 'zendvn-mp-my-setting';
     
     public function __construct() {
-        add_action('admin_menu', array($this, 'settingMenu'));
+        //add_action('admin_menu', array($this, 'settingMenu'));
         
-        add_action('admin_init', array($this, 'register_setting_and_fields'));
+        //add_action('admin_init', array($this, 'register_setting_and_fields'));
         
-        $this->ajaxPage();
+        //$this->ajaxPage();
+        $this->ajaxPage2();
         
     }
     
@@ -74,6 +75,11 @@ class ZendvnMpAdmin {
     public function ajaxPage() {
         require_once ZENDVN_MP_SETTING_DIR . '/ajax.php';
         new Zendvn_Mp_Setting_Ajax();
+    }
+    
+    public function ajaxPage2() {
+        require_once ZENDVN_MP_SETTING_DIR . '/ajax2.php';
+        new Zendvn_Mp_Setting_Ajax2();
     }
     
 }
