@@ -16,7 +16,7 @@ get_header(); ?>
 
 		<div id="container">
 			<div id="content" role="main">
-				<h1><?php echo ptad_get_post_type_description(); ?></h1>
+
 <?php
 	/*
 	 * Queue the first post, that way we know

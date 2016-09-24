@@ -14,7 +14,7 @@
  * @since Twenty Ten 1.2
  */
 ?>
-
+<h2><?php single_post_title('ZendVN ', true); ?></h2>
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 				<div id="nav-above" class="navigation">
