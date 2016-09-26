@@ -21,6 +21,7 @@ define('ZENDVN_MP_WIDGET_DIR', ZENDVN_MP_PLUGIN_DIR . 'widgets');
 define('ZENDVN_MP_SHORTCODES_DIR', ZENDVN_MP_PLUGIN_DIR . 'shortcodes');
 define('ZENDVN_MP_METABOX_DIR', ZENDVN_MP_PLUGIN_DIR . 'metabox');
 define('ZENDVN_MP_SETTING_DIR', ZENDVN_MP_PLUGIN_DIR . 'settings');
+define('ZENDVN_MP_CP_DIR', ZENDVN_MP_PLUGIN_DIR . 'posts');
 
 if(!is_admin()) {
     //require_once ZENDVN_MP_PLUGIN_DIR . 'public.php';
@@ -41,6 +42,10 @@ if(!is_admin()) {
 }
 
 require_once ZENDVN_MP_WIDGET_DIR . '/simple.php';
+
+require_once ZENDVN_MP_CP_DIR . '/product.php';
+new Cp_Product();
+
 
 add_action('widgets_init', 'zendvn_mp_widget_simple');
 function zendvn_mp_widget_simple() {
