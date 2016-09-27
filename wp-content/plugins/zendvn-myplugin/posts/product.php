@@ -18,7 +18,8 @@ class Cp_Product {
             'search_items'          =>      __('Search Product'),
             'not_found'             =>      __('No products found'),
             'not_found_in_trash'    =>      __('No products found in Trash'),
-            'view_item'             =>      __('View Product')
+            'view_item'             =>      __('View Product'),
+            'edit_item'             =>      __('Edit Product')
         );
         
         $args       =   array(
@@ -45,13 +46,25 @@ class Cp_Product {
     }
     
     public function load_template($template_file) {
+        global $wp;
         if(is_single()) {
-            global $wp;
-            
             if($wp->query_vars['post_type'] == 'zproduct') {
-                echo locate_template('loop-zproduct.php');
+                $file = ZENDVN_MP_CP_DIR . '/templates/loop-zproduct.php';
+                if(file_exists($file)) {
+                    $template_file  =   $file;
+                }
             }
         }
+        
+        if(is_archive()) {
+            if($wp->query_vars['post_type'] == 'zproduct') {
+                $file =     ZENDVN_MP_CP_DIR . '/templates/list-zproduct.php';
+                if(file_exists($file)) {
+                    $template_file  =   $file;
+                }
+            }
+        }
+        
         return $template_file;
     }
     

@@ -15,7 +15,7 @@ class Zendvn_Mp_Mb_Data {
     
     public function display() {
         add_action('admin_enqueue_scripts', array($this, 'add_css_file'));
-        add_meta_box($this->_metabox_id, $this->_metabox_name, array($this, 'show'), 'post');
+        add_meta_box($this->_metabox_id, $this->_metabox_name, array($this, 'show'), 'zproduct');
     }
     
     public function save($post_id) {

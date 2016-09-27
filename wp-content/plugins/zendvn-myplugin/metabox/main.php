@@ -8,8 +8,8 @@ class Zendvn_Mp_Metabox_Main {
     public function __construct() {
         $defaultOption  =   array(
             'zendvn_mp_mb_simple'       =>  false,
-            'zendvn-mp-mb-data'         =>  false,
-            'zendvn-mp-mb-data2'        =>  true,
+            'zendvn-mp-mb-data'         =>  true,
+            'zendvn-mp-mb-data2'        =>  false,
             'zendvn-mp-mb-editor'       =>  false,
             'zendvn-mp-mb-media'        =>  false,
         );
