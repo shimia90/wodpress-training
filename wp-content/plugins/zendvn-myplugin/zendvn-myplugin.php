@@ -22,21 +22,22 @@ define('ZENDVN_MP_SHORTCODES_DIR', ZENDVN_MP_PLUGIN_DIR . 'shortcodes');
 define('ZENDVN_MP_METABOX_DIR', ZENDVN_MP_PLUGIN_DIR . 'metabox');
 define('ZENDVN_MP_SETTING_DIR', ZENDVN_MP_PLUGIN_DIR . 'settings');
 define('ZENDVN_MP_CP_DIR', ZENDVN_MP_PLUGIN_DIR . 'posts');
+define('ZENDVN_MP_CT_DIR', ZENDVN_MP_PLUGIN_DIR . 'taxonomy');
 
 if(!is_admin()) {
     //require_once ZENDVN_MP_PLUGIN_DIR . 'public.php';
     //new ZendvnMp();
-    
+
     require_once ZENDVN_MP_METABOX_DIR . '/main.php';
-    
+
 } else {
     require_once ZENDVN_MP_PLUGIN_DIR . 'admin.php';
     require_once ZENDVN_MP_INCLUDES_DIR . '/html.php';
     require_once ZENDVN_MP_WIDGET_DIR . '/db_simple.php';
     new ZendvnMpAdmin();
     new ZendvnMp_Widget_Db_Simple();
-    
-    
+
+
     require_once ZENDVN_MP_METABOX_DIR . '/main.php';
     new Zendvn_Mp_Metabox_Main();
 }
@@ -45,6 +46,9 @@ require_once ZENDVN_MP_WIDGET_DIR . '/simple.php';
 
 require_once ZENDVN_MP_CP_DIR . '/product.php';
 new Cp_Product();
+
+require_once ZENDVN_MP_CT_DIR . '/book.php';
+new Zendvn_Mp_CT_BookCategory();
 
 
 add_action('widgets_init', 'zendvn_mp_widget_simple');
