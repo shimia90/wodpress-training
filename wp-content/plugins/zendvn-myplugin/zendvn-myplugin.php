@@ -42,6 +42,9 @@ if(!is_admin()) {
     new Zendvn_Mp_Metabox_Main();
 }
 
+require_once ZENDVN_MP_METABOX_DIR . '/taxonomy.php';
+new Zendvn_Mp_Mb_Taxonomy();
+
 require_once ZENDVN_MP_WIDGET_DIR . '/simple.php';
 
 require_once ZENDVN_MP_CP_DIR . '/product.php';
