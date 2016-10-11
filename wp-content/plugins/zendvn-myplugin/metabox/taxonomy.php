@@ -31,16 +31,23 @@ class Zendvn_Mp_Mb_Taxonomy {
     }
 
     public function load_template($template_file) {
-        echo '<h3 style="font-weight: bold; color: red;">' .  __METHOD__  . '</h3>';
-        echo is_category();
         global $wp;
-        if(is_single()) {
-            if($wp->query_vars['post_type'] == 'zproduct') {
-                $file = ZENDVN_MP_CP_DIR . '/templates/loop-zproduct.php';
+        global $wp_query;
+        global $zendvn_mp_taxonomy_category;
+
+        if(is_category()) {
+            $cat_id         =   $wp_query->query_vars['cat'];
+            $option_name    =   $this->_prefix_name . '-'. $cat_id;
+            $option_value   =   get_option($option_name, array());
+            $zendvn_mp_taxonomy_category    =   $option_value;
+            if(count($option_value) > 0) {
+                $file = ZENDVN_MP_METABOX_DIR . '/templates/category.php';
                 if(file_exists($file)) {
                     $template_file  =   $file;
                 }
             }
+
+
         }
 
         return $template_file;
