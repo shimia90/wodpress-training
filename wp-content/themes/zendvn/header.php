@@ -18,7 +18,7 @@
 </head>
 
 <body class="home fixed-nav">
-
+	
 	<div id="wrap" class="clr">
 
 		<div id="top-wrap" class="clr">
@@ -32,7 +32,7 @@
 							<span class="fa fa-clock-o"></span>13-Oct-2014
 						</div>
 					</div>
-					<?php get_sidebar('top-menu'); ?>
+					<?php require_once ZENDVN_THEME_INC_DIR . '/top-menu.php'; ?>
 					<div id="topbar-search" class="clr">
 						<form method="get" class="topbar-searchform" action="#"
 							role="search">
@@ -66,11 +66,11 @@
 				</div>
 				<!-- .site-branding -->
 				<div class="ad-spot header-ad clr">
-					<a href="#" title="Ad"><img src="images/ad-620x80.png" alt="Ad" /></a>
+					<a href="#" title="Ad"><img src="<?php echo ZENDVN_THEME_IMAGES_URL; ?>/ad-620x80.png" alt="Ad" /></a>
 				</div>
 				<!-- .ad-spot -->
 			</header>
 			<!-- #header -->
-			<?php get_sidebar('main-menu'); ?>
+			<?php require_once ZENDVN_THEME_INC_DIR . '/main-menu.php';?>
 		</div>
 		<!-- #top-wrap -->

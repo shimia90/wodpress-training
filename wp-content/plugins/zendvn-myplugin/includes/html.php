@@ -6,29 +6,37 @@ class ZendvnHtml{
 		
 	}
 	
-	public function btn_media_script($button_id, $input_id) {
-	    $script = "<script>
-            	    jQuery(document).ready(function($){
-            	    $('#{$button_id}').zendvnBtnMedia('{$input_id}');
-            	    });
-              </script>";
-	    return $script;
+	public function btn_media_script($button_id,$input_id){
+		$script = "<script>
+						jQuery(document).ready(function($){
+							$('#{$button_id}').zendvnBtnMedia('{$input_id}');
+						});
+					</script>";
+		return $script;
+	}
+	public function pTag($value = '', $attr = array(), $options = null){
+		$strAttr = '';
+		if(count($attr)> 0){
+			foreach ($attr as $key => $val){
+				if($key != "type" && $key != 'value'){
+					$strAttr .= ' ' . $key . '="' . $val . '" ';
+				}
+			}
+		}
+		
+		return '<p ' . $strAttr .' >' . $value . '</p>';
 	}
 	
-	public function pTag($value, $attr   =   array(), $options = null) {
-	    $strAttr = '';
-	    if(count($attr)> 0){
-	        foreach ($attr as $key => $val){
-	            if($key != "type" && $key != 'value'){
-	                $strAttr .= ' ' . $key . '="' . $val . '" ';
-	            }
-	        }
-	    }
-	    return '<p ' . $strAttr .' >'. $value .'</p>';
-	}
-	
-	public function label($value = '', $attr = array(), $options = null) {
-	    return '<label for="'.$attr['for'].'" >'.$value.':</label>';
+	public function label($value = '',$attr = array(), $options = null){
+		$strAttr = '';
+		if(count($attr)> 0){
+			foreach ($attr as $key => $val){
+				if($key != "type" && $key != 'value'){
+					$strAttr .= ' ' . $key . '="' . $val . '" ';
+				}
+			}
+		}
+		return '<label ' . $strAttr . ' >' . $value . ':</label>';
 	}
 	
 	//Phần tử TEXTBOX

@@ -1,0 +1,10 @@
+@CHARSET "ISO-8859-1";
+.zendvn-mb-wrap {
+	overflow: auto;
+}
+
+.zendvn-mb-wrap label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 3px;
+}

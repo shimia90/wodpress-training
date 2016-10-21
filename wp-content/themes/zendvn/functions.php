@@ -1,5 +1,31 @@
 <?php
 /*=================================================
+ * Declare Global Variables
+ *=================================================*/
+define('ZENDVN_THEME_DIR', get_template_directory());
+define('ZENDVN_THEME_URL', get_template_directory_uri());
+
+define('ZENDVN_THEME_INC_DIR', ZENDVN_THEME_DIR . '/inc');
+define('ZENDVN_THEME_WIDGET_DIR', ZENDVN_THEME_INC_DIR . '/widgets');
+
+define('ZENDVN_THEME_CSS_URL', ZENDVN_THEME_URL . '/css');
+define('ZENDVN_THEME_JS_URL', ZENDVN_THEME_URL . '/js');
+define('ZENDVN_THEME_IMAGES_URL', ZENDVN_THEME_URL . '/images');
+define('ZENDVN_THEME_FILES_URL', ZENDVN_THEME_URL . '/files');
+
+/*=================================================
+ * Init
+ *=================================================*/
+
+if(!class_exists('ZendvnHtml') && is_admin()) {
+    require_once ZENDVN_THEME_INC_DIR . '/html.php';
+    new ZendvnHtml();
+}
+
+require_once ZENDVN_THEME_WIDGET_DIR . '/main.php';
+new Zendvn_Theme_Widget_Main();
+
+/*=================================================
  * Declare Widget of Theme
  *=================================================*/
 add_action('widgets_init', 'zend_theme_widget_init');
@@ -9,11 +35,10 @@ function zend_theme_widget_init() {
     	'id'            => 'primary-widget-area',
     	'description'   => __( 'Add Widget To The Right of Website', 'zendvn' ),
         'class'         => '',
-    	'before_widget' => '<div id="%1$s" class="sidebar-widget %2$s">',
+    	'before_widget' => '<div id="%1$s" class="sidebar-widget %2$s clr">',
     	'after_widget'  => '</div>',
     	'before_title'  => '<span class="widget-title">',
     	'after_title'   => '</span>' 
-       
     ));
 }
 
@@ -41,6 +66,9 @@ function zendvn_theme_register_style() {
     wp_register_style('zendvn_theme_ie8', $cssUrl . '/ie8.css', array(), '1.0');
     $wp_styles->add_data('zendvn_theme_ie8', 'conditional', 'IE 8');
     wp_enqueue_style('zendvn_theme_ie8');
+    
+    wp_register_style('zendvn_theme_customizer', $cssUrl . '/customizer.css', array(), '1.0');
+    wp_enqueue_style('zendvn_theme_customizer');
 }
 /*=================================================
  * 2. include js files into themes

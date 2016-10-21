@@ -7,7 +7,7 @@
 			<!-- .entry-cat-tag -->
 			<div class="home-slider-media">
 				<a href="#" title="Model Shoot For GQ 2015"> <img
-					src="files/uploads/2014/09/shutterstock_180775436-620x350.jpg"
+					src="<?php echo ZENDVN_THEME_FILES_URL; ?>/uploads/2014/09/shutterstock_180775436-620x350.jpg"
 					alt="Model Shoot For GQ 2015" />
 				</a>
 			</div>
@@ -33,7 +33,7 @@
 			<!-- .entry-cat-tag -->
 			<div class="home-slider-media">
 				<a href="#" title="New War Statistics Shared To The Public"> <img
-					src="files/uploads/2014/09/shutterstock_136240700-620x350.jpg"
+					src="<?php echo ZENDVN_THEME_FILES_URL; ?>/uploads/2014/09/shutterstock_136240700-620x350.jpg"
 					alt="New War Statistics Shared To The Public" />
 				</a>
 			</div>
@@ -59,7 +59,7 @@
 			<!-- .entry-cat-tag -->
 			<div class="home-slider-media">
 				<a href="#" title="This is Syamil&#8217;s House"> <img
-					src="files/uploads/2014/01/shutterstock_112421816-620x350.jpg"
+					src="<?php echo ZENDVN_THEME_FILES_URL; ?>/uploads/2014/01/shutterstock_112421816-620x350.jpg"
 					alt="This is Syamil&#8217;s House" />
 				</a>
 			</div>
@@ -85,7 +85,7 @@
 			<!-- .entry-cat-tag -->
 			<div class="home-slider-media">
 				<a href="#" title="Best Places To Buy Music"> <img
-					src="files/uploads/2013/12/shutterstock_135052274-620x350.jpg"
+					src="<?php echo ZENDVN_THEME_FILES_URL; ?>/uploads/2013/12/shutterstock_135052274-620x350.jpg"
 					alt="Best Places To Buy Music" />
 				</a>
 			</div>

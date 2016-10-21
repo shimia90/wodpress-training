@@ -18,7 +18,7 @@
 					<li class="first-post clr">
 						<div class="first-post-media clr">
 							<a href="#" title="I&#8217;m Hungry, Make Me A Sandwich"> <img
-								src="files/uploads/2013/12/shutterstock_167357615-620x350.jpg"
+								src="<?php echo ZENDVN_THEME_FILES_URL; ?>/uploads/2013/12/shutterstock_167357615-620x350.jpg"
 								alt="I&#8217;m Hungry, Make Me A Sandwich" width="620"
 								height="350" />
 							</a>
@@ -53,7 +53,7 @@
 						<a href="#"
 						title="Formula 1 Is Boring But The Cars Are Super Awesome"
 						class="widget-recent-posts-thumbnail clr"> <img
-							src="files/uploads/2014/02/shutterstock_80791570-650x250.jpg"
+							src="<?php echo ZENDVN_THEME_FILES_URL; ?>/uploads/2014/02/shutterstock_80791570-650x250.jpg"
 							alt="Formula 1 Is Boring But The Cars Are Super Awesome"
 							width="650" height="250" />
 					</a>
@@ -67,7 +67,7 @@
 					<li class="clr widget-recent-posts-li top-thumbnail format-gallery">
 						<a href="#" title="Model Shoot For GQ 2015"
 						class="widget-recent-posts-thumbnail clr"> <img
-							src="files/uploads/2014/09/shutterstock_180775436-650x250.jpg"
+							src="<?php echo ZENDVN_THEME_FILES_URL; ?>/uploads/2014/09/shutterstock_180775436-650x250.jpg"
 							alt="Model Shoot For GQ 2015" width="650" height="250" />
 					</a>
 						<div class="widget-recent-posts-content clr">
@@ -78,7 +78,7 @@
 					<li class="clr widget-recent-posts-li top-thumbnail format-gallery">
 						<a href="#" title="Amazing Nature Photography by Matt Tucker"
 						class="widget-recent-posts-thumbnail clr"> <img
-							src="files/uploads/2014/02/shutterstock_170818697-650x250.jpg"
+							src="<?php echo ZENDVN_THEME_FILES_URL; ?>/uploads/2014/02/shutterstock_170818697-650x250.jpg"
 							alt="Amazing Nature Photography by Matt Tucker" width="650"
 							height="250" />
 					</a>
@@ -116,7 +116,7 @@
 			<div class="footer-widget widget_text clr">
 				<div class="textwidget">
 					<a href="#" title="Total Theme"> <img
-						src="files/uploads/2014/09/total-theme.png" alt="Total Theme" />
+						src="<?php echo ZENDVN_THEME_FILES_URL; ?>/uploads/2014/09/total-theme.png" alt="Total Theme" />
 					</a>
 				</div>
 			</div>

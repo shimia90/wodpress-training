@@ -5,7 +5,7 @@
 		<div id="primary" class="content-area clr">
 			<div id="content" class="site-content left-content boxed-content"
 				role="main">
-				<?php get_sidebar('top-content'); ?>
+				<?php require_once ZENDVN_THEME_INC_DIR . '/top-content.php'; ?>
 				<div class="home-cats clr">
 					<div class="home-cat-entry clr col-1">
 						<h2 class="heading">
@@ -16,7 +16,7 @@
 								<div class="home-cat-entry-post-first-media clr">
 									<a href="#"
 										title="Don&#8217;t Forget To Stretch After Your Workout"> <img
-										src="files/uploads/2014/09/shutterstock_73219318-620x350.jpg"
+										src="<?php echo ZENDVN_THEME_FILES_URL; ?>/uploads/2014/09/shutterstock_73219318-620x350.jpg"
 										alt="" width="620" height="350" />
 									</a>
 									<div class="entry-cat-tag cat-26-bg">
@@ -58,7 +58,7 @@
 							<li class="home-cat-entry-post-first clr">
 								<div class="home-cat-entry-post-first-media clr">
 									<a href="#" title="Tucan In Amazon RainForest"> <img
-										src="files/uploads/2014/09/shutterstock_141263962-620x350.jpg"
+										src="<?php echo ZENDVN_THEME_FILES_URL; ?>/uploads/2014/09/shutterstock_141263962-620x350.jpg"
 										alt="" width="620" height="350" />
 									</a>
 									<div class="entry-cat-tag cat-4-bg">
@@ -98,7 +98,7 @@
 							<li class="home-cat-entry-post-first clr">
 								<div class="home-cat-entry-post-first-media clr">
 									<a href="#" title="Amazon Voted The Coolest Company of 2014"> <img
-										src="files/uploads/2014/09/shutterstock_175315058-620x350.jpg"
+										src="<?php echo ZENDVN_THEME_FILES_URL; ?>/uploads/2014/09/shutterstock_175315058-620x350.jpg"
 										alt="" width="620" height="350" />
 									</a>
 									<div class="entry-cat-tag cat-27-bg">
@@ -140,7 +140,7 @@
 							<li class="home-cat-entry-post-first clr">
 								<div class="home-cat-entry-post-first-media clr">
 									<a href="#" title="Mount Fuji Japan"> <img
-										src="files/uploads/2014/09/shutterstock_146675243-620x350.jpg"
+										src="<?php echo ZENDVN_THEME_FILES_URL; ?>/uploads/2014/09/shutterstock_146675243-620x350.jpg"
 										alt="" width="620" height="350" />
 									</a>
 									<div class="entry-cat-tag cat-5-bg">
@@ -181,7 +181,7 @@
 							<li class="home-cat-entry-post-first clr">
 								<div class="home-cat-entry-post-first-media clr">
 									<a href="#" title="Out Shopping With The Girls in Las Vegas"> <img
-										src="files/uploads/2014/09/shutterstock_114526624-620x350.jpg"
+										src="<?php echo ZENDVN_THEME_FILES_URL; ?>/uploads/2014/09/shutterstock_114526624-620x350.jpg"
 										alt="" width="620" height="350" />
 									</a>
 									<div class="entry-cat-tag cat-3-bg">
@@ -223,7 +223,7 @@
 								<div class="home-cat-entry-post-first-media clr">
 									<a href="#"
 										title="Formula 1 Is Boring But The Cars Are Super Awesome"> <img
-										src="files/uploads/2014/02/shutterstock_80791570-620x350.jpg"
+										src="<?php echo ZENDVN_THEME_FILES_URL; ?>/uploads/2014/02/shutterstock_80791570-620x350.jpg"
 										alt="" width="620" height="350" />
 									</a>
 									<div class="entry-cat-tag cat-28-bg">
@@ -263,7 +263,7 @@
 							<li class="home-cat-entry-post-first clr">
 								<div class="home-cat-entry-post-first-media clr">
 									<a href="#" title="Hiking Mount Everest"> <img
-										src="files/uploads/2014/09/shutterstock_90586426-620x350.jpg"
+										src="<?php echo ZENDVN_THEME_FILES_URL; ?>/uploads/2014/09/shutterstock_90586426-620x350.jpg"
 										alt="" width="620" height="350" />
 									</a>
 									<div class="entry-cat-tag cat-6-bg">
@@ -302,7 +302,7 @@
 							<li class="home-cat-entry-post-first clr">
 								<div class="home-cat-entry-post-first-media clr">
 									<a href="#" title="New War Statistics Shared To The Public"> <img
-										src="files/uploads/2014/09/shutterstock_136240700-620x350.jpg"
+										src="<?php echo ZENDVN_THEME_FILES_URL; ?>/uploads/2014/09/shutterstock_136240700-620x350.jpg"
 										alt="" width="620" height="350" />
 									</a>
 									<div class="entry-cat-tag cat-2-bg">
@@ -336,9 +336,9 @@
 					<!-- .home-cat-entry -->
 				</div>
 				<!-- .home-cats -->
-				<?php get_sidebar('bottom-content'); ?>
+				<?php require_once ZENDVN_THEME_INC_DIR . '/bottom-content.php'; ?>
 				<div class="ad-spot home-bottom-ad clr">
-					<a href="#" title="Ad"> <img src="images/ad-620x80.png" alt="Ad" />
+					<a href="#" title="Ad"> <img src="<?php echo ZENDVN_THEME_IMAGES_URL; ?>/ad-620x80.png" alt="Ad" />
 					</a>
 				</div>
 				<!-- .ad-spot -->

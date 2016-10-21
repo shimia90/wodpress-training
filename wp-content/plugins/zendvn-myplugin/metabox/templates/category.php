@@ -8,58 +8,49 @@
  */
 
 get_header(); ?>
+
 <style>
-.zendvn_mp_taxonomy_category {
-    border: 1px solid #ccc;
+.zendvn_mp_taxonomy_category{
+	border: solid 1px #CCC;
 	padding: 5px;
 	margin-bottom: 10px;
-	background-color: #f2f7fc;
+	background: #F2F7FC;
 }
 
-.zendvn_mp_taxonomy_category .img {
-    float: left;
+.zendvn_mp_taxonomy_category .img{
+	float: left;
 	margin: 5px;
 }
 
-.zendvn_mp_taxonomy_category .summary {
-    font-size: 14px;
+.zendvn_mp_taxonomy_category .summary{
+	font-size: 14px;
 	font-style: italic;
 }
 
-.zendvn_mp_taxonomy_category h1 {
-    clear: none;
+.zendvn_mp_taxonomy_category h1{
+	clear: none;
 	margin-bottom: 7px !important;
-	font-size: 16px !important;
+	font-size: 16px;
 }
 
-.clr {
+.clr{
 	clear: both;
 }
+
 </style>
-<?php
-    echo '<pre style="font-weight: bold; color: red;">';
-    print_r($zendvn_mp_taxonomy_category);
-    echo '</pre>';
-?>
 		<div id="container">
 			<div id="content" role="main">
 				<div class="zendvn_mp_taxonomy_category">
-					<div class="img">
-						<img src="<?php echo $zendvn_mp_taxonomy_category['picture'];?>" alt="" />
-					</div>
+					<div class="img"><img src="<?php echo $zendvn_mp_taxonomy_category['picture'];?>"></div>
 					<div class="summary">
-						<h1 class="page-title"><?php
-        					printf( __( 'Category Archives: %s', 'twentyten' ), '<span>' . single_cat_title( '', false ) . '</span>' );
-        				?></h1>
+					<h1 class="page-title"><?php
+						printf( __( 'Category: %s', 'twentyten' ), '<span>' . single_cat_title( '', false ) . '</span>' );
+					?></h1>
 						<?php echo $zendvn_mp_taxonomy_category['summary'];?>
 					</div>
 					<div class="clr"></div>
-				</div><!-- zendvn_mp_taxonomy_category  -->
-
-				<?php
-					$category_description = category_description();
-					if ( ! empty( $category_description ) )
-						echo '<div class="archive-meta">' . $category_description . '</div>';
+				</div>
+				<?php 
 
 				/*
 				 * Run the loop for the category page to output the posts.

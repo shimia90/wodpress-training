@@ -1,11 +1,11 @@
 <footer id="footer-wrap" class="site-footer clr">
-	<?php get_sidebar('footer'); ?>
+	<?php require_once ZENDVN_THEME_INC_DIR . '/footer.php'; ?>
 	<div id="footer-bottom" class="clr">
 		<div class="container clr">
 			<div id="copyright" class="clr" role="contentinfo">Copyright 2014
 				Spartan</div>
 			<!-- #copyright -->
-			<?php get_sidebar('bottom-menu'); ?>
+			<?php require_once ZENDVN_THEME_INC_DIR . '/bottom-menu.php'; ?>
 		</div>
 		<!-- .container -->
 	</div>

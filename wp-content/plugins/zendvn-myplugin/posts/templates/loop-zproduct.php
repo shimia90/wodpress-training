@@ -11,7 +11,8 @@ get_header(); ?>
 
 		<div id="container">
 			<div id="content" role="main">
-<h2><?php single_post_title('ZendVN ', true); ?></h2>
+
+<?php echo '<br/>' . __FILE__;?>
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 				<div id="nav-above" class="navigation">
@@ -43,7 +44,7 @@ get_header(); ?>
 							<h2><?php printf( __( 'About %s', 'twentyten' ), get_the_author() ); ?></h2>
 							<?php the_author_meta( 'description' ); ?>
 							<div id="author-link">
-								<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
+								<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" rel="author">
 									<?php printf( __( 'View all posts by %s <span class="meta-nav">&rarr;</span>', 'twentyten' ), get_the_author() ); ?>
 								</a>
 							</div><!-- #author-link	-->
@@ -65,8 +66,10 @@ get_header(); ?>
 				<?php comments_template( '', true ); ?>
 
 <?php endwhile; // end of the loop. ?>
-</div><!-- #content -->
+
+			</div><!-- #content -->
 		</div><!-- #container -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
+
