@@ -14,6 +14,15 @@ define('ZENDVN_THEME_IMAGES_URL', ZENDVN_THEME_URL . '/images');
 define('ZENDVN_THEME_FILES_URL', ZENDVN_THEME_URL . '/files');
 
 /*=================================================
+ * Theme Options
+ *=================================================*/
+add_action('after_setup_theme', 'zendvn_theme_post_formats');
+function zendvn_theme_post_formats() {
+    // array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' )
+    add_theme_support('post-formats', array( 'gallery', 'video', 'audio' ));
+    add_theme_support('post-thumbnails');
+}
+/*=================================================
  * Init
  *=================================================*/
 
